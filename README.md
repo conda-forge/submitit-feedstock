@@ -5,11 +5,11 @@ Home: https://github.com/facebookincubator/submitit
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/submitit-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python 3.6+ toolbox for submitting jobs to Slurm
 
-
+Documentation: https://github.com/facebookincubator/submitit
 
 Current build status
 ====================

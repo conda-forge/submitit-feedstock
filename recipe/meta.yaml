@@ -1,18 +1,18 @@
 {% set name = "submitit" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d7ba4d0301b43c0be09d53dd0a3d646a92c1f0fba3f546e783d9dc2361b8dfce
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f15c0d78edbffbda624ac692d1f91463a588fe195a409a5b71f8a8f9e11b7fa9
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Python 3.6+ toolbox for submitting jobs to Slurm"
+  summary: Python 3.6+ toolbox for submitting jobs to Slurm
   doc_url: https://github.com/facebookincubator/submitit
 
 extra:
