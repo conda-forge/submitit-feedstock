@@ -1,5 +1,5 @@
 {% set name = "submitit" %}
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c47abd01ee16e24999a0fa588606b762fe54ec07ae9b2d8bc50c88b744103e5e
+  sha256: 0c1e18e80ffda82cd96bd79d26599182214f72800903da770879922dfba45afb
 
 build:
   noarch: python
