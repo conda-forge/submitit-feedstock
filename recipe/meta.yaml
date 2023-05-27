@@ -20,6 +20,7 @@ requirements:
     - pip
     - python >=3.6
     - typing_extensions >=3.7.4.2
+    - flit_core >=3.2,<4
   run:
     - cloudpickle >=1.2.1
     - python >=3.6
