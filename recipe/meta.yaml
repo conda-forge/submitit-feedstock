@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 36a8a54ad4e10171111e7618eefe28fe819f931a89c9cd1f6d2770900c013f12
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - cloudpickle >=1.2.1
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - typing_extensions >=3.7.4.2
     - flit-core >=3.2,<4
   run:
     - cloudpickle >=1.2.1
-    - python >=3.6
+    - python >={{ python_min }}
     - typing_extensions >=3.7.4.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - submitit
     - submitit.auto
